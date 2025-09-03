@@ -36,7 +36,7 @@ const Header = () => {
         {id:1, name:'Support', href:'/' }
     ]
   return (
-    <div className={`sticky z-1000 w-full h-25  `}>
+    <div className={`hidden  lg:block sticky z-1000 w-full h-25  `}>
 <div className={`flex items-center px-10 justify-between  ${isScroll ?'bg-black/50 w-full  fixed':'pt-10'} `}>
  <div className='w-50 h-20  '>
             <img 
