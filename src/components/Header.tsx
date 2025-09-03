@@ -1,67 +1,127 @@
-import { useEffect, useState } from 'react'
-import logo from '../assets/logo-1-1.png'
+import { useEffect, useState } from "react";
+import logo from "../assets/logo-1-1.png";
+import { FaBars } from "react-icons/fa";
+import { FaX } from "react-icons/fa6";
 
-type MenuItemProps={
-    id:number,
-    name:string,
-    href:string
-}
+type MenuItemProps = {
+  id: number;
+  name: string;
+  href: string;
+};
 
 const Header = () => {
-    const [isScroll, setIsScroll] = useState(true)
-    useEffect(()=>{
-    const handleScroll=()=>{
-        if(window.scrollY > 50){
-                setIsScroll(true)
-        }else{
-            setIsScroll(false)
-        }
-     }
-     window.addEventListener('scroll', handleScroll)
-     return ()=>{
-        window.removeEventListener('scroll', handleScroll)
-     }
-    },[])
-     
-    const isActive=(id:number)=>{
-            const isActive = menuItems.filter(menuItem => menuItem.id === id)
-                
-         }
-    const menuItems:MenuItemProps[]=[
-        {id:1, name:'Intro', href:'/' },
-        {id:1, name:'Overview', href:'/' },
-        {id:1, name:'Features', href:'/' },
-        {id:1, name:'Gallary', href:'/' },
-        {id:1, name:'Price', href:'/' },
-        {id:1, name:'Support', href:'/' }
-    ]
-  return (
-    <div className={`hidden  lg:block sticky z-1000 w-full h-25  `}>
-<div className={`flex items-center px-10 justify-between  ${isScroll ?'bg-black/50 w-full  fixed':'pt-10'} `}>
- <div className='w-50 h-20  '>
-            <img 
-            src={logo} alt="logo" 
-  className='w-full h-full'
-            />
-        </div>
-        <div className='flex space-x-4'>
-          {
-           menuItems.map((menuItem)=>(
-           <ul className=''>
-             <li 
-             className='text-white font-bold text-base flex px-4 py-2 rounded-full'
-             key={menuItem.id}>
-                    <a href="#"> {menuItem.name}</a>
-             </li>
-           </ul>
-            
-           ))
-          }
-        </div>
-</div>
-       
-    </div>
-  )
-}
+  const [open, setIsOpen] = useState<boolean>(false);
+  const [activeItem, setActiveItem] = useState<number>(1); 
+  const [isScroll, setIsScroll] = useState<boolean>(false);
 
-export default Header
+  const handleToggle = (): void => {
+    setIsOpen(!open); 
+  };
+
+  const handleMenuItemClick = (id: number): void => {
+    setActiveItem(id);
+    setIsOpen(false); 
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScroll(true);
+      } else {
+        setIsScroll(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const menuItems: MenuItemProps[] = [
+    { id: 1, name: "Intro", href: "#intro" },
+    { id: 2, name: "Overview", href: "#overview" },
+    { id: 3, name: "Features", href: "#features" },
+    { id: 4, name: "Gallary", href: "#gallery" },
+    { id: 5, name: "Price", href: "#price" },
+    { id: 6, name: "Support", href: "#support" },
+  ];
+
+  return (
+    <div className={`relative z-50 w-full h-25`}>
+      <div
+        className={`flex items-center px-4 lg:px-10 justify-between ${
+          isScroll ? "bg-black/90 w-full fixed py-2" : "pt-10 bg-transparent"
+        } transition-all duration-300`}
+      >
+        <div className="lg:w-50 lg:h-20">
+          <img src={logo} alt="logo" className="w-full h-full" />
+        </div>
+        
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex space-x-4">
+          {menuItems.map((menuItem) => (
+            <ul key={menuItem.id}>
+              <li className="text-white font-bold text-base flex px-4 py-2 rounded-full">
+                <a 
+                  href={menuItem.href}
+                  className={`transition-colors duration-200  ${
+                    activeItem === menuItem.id ? "text-white bg-amber-400 px-4 py-2 rounded-full" : ""
+                  }`}
+                  onClick={() => handleMenuItemClick(menuItem.id)}
+                >
+                  {menuItem.name}
+                </a>
+              </li>
+            </ul>
+          ))}
+        </div>
+
+        {/* Mobile Hamburger Button */}
+        <button 
+          onClick={handleToggle}
+          className="md:hidden z-90 text-white focus:outline-none"
+          aria-label="Toggle menu"
+        >
+          {open ? <FaX className="absolute left-0 " size={35} /> : <FaBars size={35} />}
+        </button>
+      </div>
+      
+      {/* Mobile Menu Overlay */}
+      {open && (
+        <div 
+          className="fixed inset-0 bg-black/70 z-40 md:hidden"
+          onClick={() => setIsOpen(false)}
+        ></div>
+      )}
+      
+      {/* Mobile Menu */}
+      <div
+        className={`md:hidden fixed top-0 right-0 z-50 w-[80%] min-h-screen bg-amber-400 transform transition-transform duration-300 ease-in-out ${
+          open ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <div className="flex flex-col pt-20 px-6">
+          {menuItems.map((menuItem) => (
+            <ul key={menuItem.id} className="border-b border-amber-500 last:border-b-0">
+              <li
+                className="text-gray-800 font-bold text-lg py-4"
+              >
+                <a 
+                  href={menuItem.href}
+                  className={`transition-colors duration-200 hover:text-white ${
+                    activeItem === menuItem.id ? "text-white" : ""
+                  }`}
+                  onClick={() => handleMenuItemClick(menuItem.id)}
+                >
+                  {menuItem.name}
+                </a>
+              </li>
+            </ul>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Header;
