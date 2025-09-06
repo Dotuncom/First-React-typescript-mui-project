@@ -6,12 +6,11 @@ import { FaCheck } from "react-icons/fa6";
 import Card from "../components/ui/Card";
 import { data } from "../data";
 import ImageCard from "../components/ui/ImageCard";
+import formBackground from '../assets/parallax2-1.jpg'
 import app1 from "../assets/app1-1.jpg";
 import app2 from "../assets/app2-1.jpg";
 import app3 from "../assets/app3-1.jpg";
 import app4 from "../assets/app4-1.jpg";
-import app5 from "../assets/app5-1.jpg";
-import app6 from "../assets/app7-1.jpg";
 import PlanCard from "../components/ui/PlanCard";
 
 type chooseProps = {
@@ -254,6 +253,14 @@ const Home = () => {
       </div>
       
       
+      <div
+        className="bg-cover bg-center min-h-screen"
+        style={{ backgroundImage: `url(${formBackground})` }}
+      >
+        <div className="max-w-7xl mx-auto py-30 lg:py-40">
+          
+        </div>
+      </div>
     </div>
   );
 };

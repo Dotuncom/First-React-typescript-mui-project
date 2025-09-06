@@ -1,4 +1,3 @@
-import React from "react";
 import heroImage from "../assets/hero.jpg";
 import Header from "../components/Header";
 import mobilePhone from "../assets/sss-1.png";

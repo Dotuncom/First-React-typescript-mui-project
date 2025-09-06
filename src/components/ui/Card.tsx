@@ -1,4 +1,3 @@
-import { Divider } from "@mui/material";
 import type { ReactNode } from "react";
 
 type CardProps = {
