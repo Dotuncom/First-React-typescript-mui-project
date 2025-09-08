@@ -110,8 +110,8 @@ const Home = () => {
           </p>
         </div>
       </div>
-      <div className="lg:max-w-7xl  w-full  flex flex-col md:flex-row  text-justify md:text-left px-2 py-4 md:px-6 lg:py-0">
-        <div className="border-b-2 w-full px-5 border-gray-700  flex flex-col md:flex-row md:gap-20 text-justify md:text-left md:pt-12 ">
+      <div className="lg:max-w-7xl   w-full  flex flex-col md:flex-row  text-justify md:text-left px-2 py-4 md:px-6 lg:py-0">
+        <div className="border-b-2  w-full  border-gray-700  flex flex-col md:flex-row md:gap-20 text-justify md:text-left md:pt-12 ">
           <div>
             <h1 className="text-3xl text-center md:text-left text-gray-700">
               Information
@@ -148,11 +148,11 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="md:max-w-7xl   w-full justify-between flex flex-col md:flex-row  text-justify lg:text-left px-2 py-4 lg:px-6 lg:py-0">
-        <div className="mt-0 lg:pl-20 ">
-          <img src={mobile2} alt="mobile phone" />
+      <div className="md:max-w-7xl mt-0  w-full justify-between flex flex-col md:flex-row  text-justify lg:text-left px-2  lg:px-6 lg:py-0">
+        <div className="mt-0  lg:pl-20 ">
+          <img src={mobile2} className="w-full h-full" alt="mobile phone" />
         </div>
-        <div className=" md:pt-20">
+        <div className="px-10 md:pt-20">
           <h1 className="text-3xl text-center md:text-left text-gray-700">
             Reasons
           </h1>
@@ -218,7 +218,7 @@ const Home = () => {
             creativity soar with **Xtra**. Download today!
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-10  gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-10  place-items-center gap-4">
             <ImageCard imageUrl={app1} />
             <ImageCard imageUrl={app2} />
             <ImageCard imageUrl={app3} />
@@ -229,7 +229,7 @@ const Home = () => {
       </div>
 
       <div className="py-15 px-10">
-        <div className="">
+        <div className=" md:px-10">
           <div>
             <h1 className="text-3xl text-center md:text-left text-gray-700">
               Offers
@@ -240,7 +240,7 @@ const Home = () => {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-4 mt-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-10">
             {pricingPlans.map((plan) => (
               <PlanCard key={plan.id} plan={plan} />
             ))}
@@ -249,10 +249,10 @@ const Home = () => {
       </div>
 
       <div
-        className="bg-cover bg-center min-h-screen py-8 px-6"
+        className="bg-cover bg-center min-h-screen py-8 px-10"
         style={{ backgroundImage: `url(${formBackground})` }}
       >
-        <div className="max-w-7xl  lg:px-10 space-y-8">
+        <div className=" md:px-10 lg:px-10 space-y-8">
           <div>
             <h1 className="text-3xl text-center md:text-left text-gray-700">
               Contact Us
@@ -321,10 +321,10 @@ const Home = () => {
             </h2>
           </div>
           <div className='flex flex-col lg:flex-row gap-2'>
-            <button className='w-50 bg-amber-400  h-20 rounded-full font-bold   text-white '>
+            <button className='w-50 bg-amber-300  h-20 rounded-full font-bold   text-white '>
               hffhhf
             </button>
-            <button className='w-50 bg-amber-400 h-20 rounded-full font-bold   text-white '>
+            <button className='w-50 bg-amber-300 h-20 rounded-full font-bold   text-white '>
               hffhhf
             </button>
           </div>
@@ -333,11 +333,11 @@ const Home = () => {
       <div className="min-h-30 bg-amber-300 flex items-center justify-center">
               <SocialIcon/>
       </div>
-      <div className="min-h-30 bg-black text-white  text-center">
+      <div className=" h-10 flex items-center justify-center min-h-20 bg-black text-white  text-center">
         @copyright olamidotun 
       </div>
     </div>
-  );
+  ); 
 };
 
 export default Home;
