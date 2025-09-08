@@ -13,6 +13,7 @@ import app3 from "../assets/app3-1.jpg";
 import app4 from "../assets/app4-1.jpg";
 import PlanCard from "../components/ui/PlanCard";
 import ContactForm from "../components/Auth/ContactForm";
+import SocialIcon from '../components/SocialIcon'
 
 type chooseProps = {
   id: number;
@@ -266,8 +267,8 @@ const Home = () => {
             <div>
               <ContactForm />
             </div>
-            <div className="flex flex-col w-60 items-center justify-center gap-8">
-              <div className="flex items-center justify-center gap-2">
+            <div className="flex flex-col w-60  gap-4 items-center justify-center ">
+              <div className="flex items-center   gap-2 w-50">
                 <div className="flex items-center justify-center rounded-full bg-amber-400 h-12 w-12">
                   oooo
                 </div>
@@ -276,7 +277,7 @@ const Home = () => {
                   <h1>0813 866 2406</h1>
                 </div>
               </div>
-              <div className="flex items-center justify-center gap-2">
+              <div className="flex items-center  gap-2   w-50 ">
                 <div className="flex items-center justify-center rounded-full bg-amber-400 h-12 w-12">
                   oooo
                 </div>
@@ -285,7 +286,7 @@ const Home = () => {
                   <h1>myemail.com</h1>
                 </div>
               </div>
-              <div className="flex items-center justify-center gap-2">
+              <div className="flex items-center gap-2  w-50">
                 <div className="flex items-center justify-center rounded-full bg-amber-400 h-12 w-12">
                   oooo
                 </div>
@@ -294,7 +295,7 @@ const Home = () => {
                   <h1>my address </h1>
                 </div>
               </div>
-              <div className="flex items-center justify-center gap-2">
+              <div className="flex items-center gap-2  w-50 ">
                 <div className="flex items-center justify-center rounded-full bg-amber-400 h-12 w-12">
                   oooo
                 </div>
@@ -309,7 +310,7 @@ const Home = () => {
       </div>
 
       <div className="max-w-7xl min-h-60 py-20">
-        <div className="flex flex-col lg:flewx-row items-center justify-around">
+        <div className="flex flex-col lg:flex-row items-center justify-around">
           <div>
             <h1 className="text-3xl text-center md:text-left text-gray-700">
               Downloading
@@ -329,11 +330,11 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="min-h-30 bg-amber-500 flex items-center justify-center">
-kkk
+      <div className="min-h-30 bg-amber-300 flex items-center justify-center">
+              <SocialIcon/>
       </div>
-      <div className="min-h-30 bg-black text-white ">
-kkk
+      <div className="min-h-30 bg-black text-white  text-center">
+        @copyright olamidotun 
       </div>
     </div>
   );
