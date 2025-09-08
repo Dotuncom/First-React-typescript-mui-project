@@ -184,7 +184,7 @@ const Home = () => {
 
       <div
       
-        className="bg-cover bg-center min-h-screen"
+        className="bg-cover bg-center lg:min-h-screen"
         style={{ backgroundImage: `url(${cardBackgroud})` }}
       >
         <div id="features" className="max-w-7xl mx-auto py-30 lg:py-40">
@@ -251,7 +251,7 @@ const Home = () => {
 
       <div
       id='support'
-        className="bg-cover bg-center min-h-screen py-8 lg:py-25 px-10"
+        className="bg-cover bg-center lg:min-h-screen py-8 lg:py-25 px-10"
         style={{ backgroundImage: `url(${formBackground})` }}
       >
         <div   className=" md:px-10 lg:px-10 space-y-8">

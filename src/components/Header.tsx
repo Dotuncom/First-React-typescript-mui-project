@@ -74,7 +74,7 @@ const Header = () => {
               </li>
             </ul>
           ))}
-         <button className="bg-amber-300 text-white font-bold rounded-full px-4 h-10 hover:text-amber-300 hover:bg-black transition-colors duration-500 ease-out"> Download App</button>
+         <button className="hidden lg:block bg-amber-300 text-white font-bold rounded-full px-4 h-10 hover:text-amber-300 hover:bg-black transition-colors duration-500 ease-out"> Download App</button>
         </div>
 
         {/* Mobile Hamburger Button */}
