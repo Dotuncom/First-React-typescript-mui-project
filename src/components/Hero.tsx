@@ -4,7 +4,7 @@ import mobilePhone from "../assets/sss-1.png";
 import { Button, Stack } from "@mui/material";
 const Hero = () => {
   return (
-    <div className=" relative min-h-screen md:min-h-200 lg:min-h-screen w-full">
+    <div id="intro" className="  relative min-h-screen md:min-h-200 lg:min-h-screen w-full">
       <img
         src={heroImage}
         className="absolute w-full h-full bg-cover bg-center"

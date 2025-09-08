@@ -41,7 +41,7 @@ const Header = () => {
     { id: 1, name: "Intro", href: "#intro" },
     { id: 2, name: "Overview", href: "#overview" },
     { id: 3, name: "Features", href: "#features" },
-    { id: 4, name: "Gallary", href: "#gallery" },
+    { id: 4, name: "Gallery", href: "#gallery" },
     { id: 5, name: "Price", href: "#price" },
     { id: 6, name: "Support", href: "#support" },
   ];
@@ -61,7 +61,7 @@ const Header = () => {
         <div className="hidden md:flex space-x-4">
           {menuItems.map((menuItem) => (
             <ul key={menuItem.id}>
-              <li className="text-white font-bold text-base flex px-4 py-2 rounded-full">
+              <li className="text-white hover:bg-amber-300 font-bold text-base flex px-4 py-2 rounded-full">
                 <a 
                   href={menuItem.href}
                   className={`transition-colors duration-200  ${
@@ -74,6 +74,7 @@ const Header = () => {
               </li>
             </ul>
           ))}
+         <button className="bg-amber-300 text-white font-bold rounded-full px-4 h-10 hover:text-amber-300 hover:bg-black transition-colors duration-500 ease-out"> Download App</button>
         </div>
 
         {/* Mobile Hamburger Button */}
@@ -89,7 +90,7 @@ const Header = () => {
       {/* Mobile Menu Overlay */}
       {open && (
         <div 
-          className="fixed inset-0 bg-black/70 z-90 md:hidden"
+          className="fixed inset-0 bg-black/10 z-90 md:hidden"
           onClick={() => setIsOpen(false)}
         ></div>
       )}
@@ -118,7 +119,9 @@ const Header = () => {
               </li>
             </ul>
           ))}
+          
         </div>
+        
       </div>
     </div>
   );

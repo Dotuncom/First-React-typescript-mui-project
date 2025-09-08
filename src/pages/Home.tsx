@@ -110,7 +110,7 @@ const Home = () => {
           </p>
         </div>
       </div>
-      <div className="lg:max-w-7xl    w-full  flex flex-col md:flex-row  text-justify md:text-left px-6 py-4 md:px-6 lg:py-0">
+      <div id="overview" className="lg:max-w-7xl    w-full  flex flex-col md:flex-row  text-justify md:text-left px-6 py-4 md:px-6 lg:py-0">
         <div className="border-b-2  w-full  border-gray-700  flex flex-col md:flex-row md:gap-20 text-justify md:text-left md:pt-12 ">
           <div>
             <h1 className="text-3xl text-center md:text-left text-gray-700">
@@ -166,7 +166,7 @@ const Home = () => {
             to find out if your charges will be approved, so you can make
             purchases.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 md:gap-6">
+          <div  className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 md:gap-6">
             {choose.map((item) => (
               <div
                 key={item.id}
@@ -183,10 +183,11 @@ const Home = () => {
       </div>
 
       <div
+      
         className="bg-cover bg-center min-h-screen"
         style={{ backgroundImage: `url(${cardBackgroud})` }}
       >
-        <div className="max-w-7xl mx-auto py-30 lg:py-40">
+        <div id="features" className="max-w-7xl mx-auto py-30 lg:py-40">
           <div className="gap-x-2 gap-y-25 lg:gap-y-30  place-items-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3   ">
             {data.map((item) => (
               <Card
@@ -200,7 +201,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="py-15 px-10">
+      <div id='gallery' className="py-15 px-10">
         <div className=" ">
           <div>
             <h1 className="text-3xl text-center md:text-left text-gray-700">
@@ -228,7 +229,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="py-15 px-10">
+      <div id='price' className="py-15 px-10">
         <div className=" md:px-10">
           <div>
             <h1 className="text-3xl text-center md:text-left text-gray-700">
@@ -249,10 +250,11 @@ const Home = () => {
       </div>
 
       <div
-        className="bg-cover bg-center min-h-screen py-8 px-10"
+      id='support'
+        className="bg-cover bg-center min-h-screen py-8 lg:py-25 px-10"
         style={{ backgroundImage: `url(${formBackground})` }}
       >
-        <div className=" md:px-10 lg:px-10 space-y-8">
+        <div   className=" md:px-10 lg:px-10 space-y-8">
           <div>
             <h1 className="text-3xl text-center md:text-left text-gray-700">
               Contact Us
@@ -336,6 +338,7 @@ const Home = () => {
       <div className=" h-10 flex items-center justify-center min-h-20 bg-black text-white  text-center">
         @copyright olamidotun 
       </div>
+      
     </div>
   ); 
 };

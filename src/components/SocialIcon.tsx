@@ -1,3 +1,4 @@
+import { Tooltip } from "@mui/material";
 
 const SocialIcons = () => {
   const socialIcons = [
@@ -68,7 +69,9 @@ const SocialIcons = () => {
       <div className=" rounded-lg">
         <div className="grid grid-cols-3 md:grid-cols-6 space-x-2 md:space-x-6">
           {socialIcons.map((social, index) => (
-            <div
+            
+            <Tooltip title={social.name} >
+                        <div
               key={index}
               className={`
                 w-12 h-12 
@@ -85,6 +88,7 @@ const SocialIcons = () => {
             >
               {social.icon}
             </div>
+            </Tooltip>
           ))}
         </div>
       </div>
