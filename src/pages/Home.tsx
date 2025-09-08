@@ -110,7 +110,7 @@ const Home = () => {
           </p>
         </div>
       </div>
-      <div className="lg:max-w-7xl   w-full  flex flex-col md:flex-row  text-justify md:text-left px-2 py-4 md:px-6 lg:py-0">
+      <div className="lg:max-w-7xl    w-full  flex flex-col md:flex-row  text-justify md:text-left px-6 py-4 md:px-6 lg:py-0">
         <div className="border-b-2  w-full  border-gray-700  flex flex-col md:flex-row md:gap-20 text-justify md:text-left md:pt-12 ">
           <div>
             <h1 className="text-3xl text-center md:text-left text-gray-700">
@@ -148,11 +148,11 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="md:max-w-7xl mt-0  w-full justify-between flex flex-col md:flex-row  text-justify lg:text-left px-2  lg:px-6 lg:py-0">
+      <div className="md:max-w-7xl mt-0 py-4  w-full justify-between flex flex-col md:flex-row  text-justify lg:text-left px-6  lg:px-6 lg:py-0">
         <div className="mt-0  lg:pl-20 ">
           <img src={mobile2} className="w-full h-full" alt="mobile phone" />
         </div>
-        <div className="px-10 md:pt-20">
+        <div className="px-6 md:pt-20">
           <h1 className="text-3xl text-center md:text-left text-gray-700">
             Reasons
           </h1>
