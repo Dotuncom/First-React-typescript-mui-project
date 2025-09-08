@@ -66,7 +66,7 @@ const SocialIcons = () => {
   return (
     <div className="flex items-center justify-center ">
       <div className=" rounded-lg">
-        <div className="flex space-x-2 md:space-x-6">
+        <div className="grid grid-cols-3 md:grid-cols-6 space-x-2 md:space-x-6">
           {socialIcons.map((social, index) => (
             <div
               key={index}

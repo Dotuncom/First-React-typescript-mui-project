@@ -152,7 +152,7 @@ const Home = () => {
         <div className="mt-0  lg:pl-20 ">
           <img src={mobile2} className="w-full h-full" alt="mobile phone" />
         </div>
-        <div className="px-6 md:pt-20">
+        <div className=" md:pt-20">
           <h1 className="text-3xl text-center md:text-left text-gray-700">
             Reasons
           </h1>
