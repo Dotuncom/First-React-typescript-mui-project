@@ -89,7 +89,7 @@ const Header = () => {
       {/* Mobile Menu Overlay */}
       {open && (
         <div 
-          className="fixed inset-0 bg-black/70 z-40 md:hidden"
+          className="fixed inset-0 bg-black/70 z-90 md:hidden"
           onClick={() => setIsOpen(false)}
         ></div>
       )}
