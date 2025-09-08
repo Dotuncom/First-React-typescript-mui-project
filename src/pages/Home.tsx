@@ -249,10 +249,10 @@ const Home = () => {
       </div>
 
       <div
-        className="bg-cover bg-center min-h-screen pt-8 px-6"
+        className="bg-cover bg-center min-h-screen py-8 px-6"
         style={{ backgroundImage: `url(${formBackground})` }}
       >
-        <div className="max-w-7xl  px-10 space-y-8">
+        <div className="max-w-7xl  lg:px-10 space-y-8">
           <div>
             <h1 className="text-3xl text-center md:text-left text-gray-700">
               Contact Us
@@ -310,7 +310,7 @@ const Home = () => {
       </div>
 
       <div className="max-w-7xl min-h-60 py-20">
-        <div className="flex flex-col lg:flex-row items-center justify-around">
+        <div className="flex flex-col lg:flex-row gap-4 items-center justify-around">
           <div>
             <h1 className="text-3xl text-center md:text-left text-gray-700">
               Downloading
@@ -320,11 +320,11 @@ const Home = () => {
               Trail Version
             </h2>
           </div>
-          <div className='flex gap-2'>
-            <button className='bg-amber-400 h-15 rounded-full font-bold   text-white w-25'>
+          <div className='flex flex-col lg:flex-row gap-2'>
+            <button className='w-50 bg-amber-400  h-20 rounded-full font-bold   text-white '>
               hffhhf
             </button>
-            <button className='bg-amber-400 h-15 rounded-full font-bold   text-white w-25'>
+            <button className='w-50 bg-amber-400 h-20 rounded-full font-bold   text-white '>
               hffhhf
             </button>
           </div>
