@@ -47,7 +47,7 @@ const Header = () => {
   ];
 
   return (
-    <div className={`relative z-50 w-full h-25`}>
+    <div className={`relative z-90 w-full h-25`}>
       <div
         className={`flex items-center px-4 lg:px-10 justify-between ${
           isScroll ? "bg-black/90 w-full fixed py-2" : "pt-10 bg-transparent"
