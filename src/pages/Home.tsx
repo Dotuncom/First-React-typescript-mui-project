@@ -200,8 +200,8 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="py-15 px-6">
-        <div className="max-w-7xl mx-auto">
+      <div className="py-15 px-10">
+        <div className=" ">
           <div>
             <h1 className="text-3xl text-center md:text-left text-gray-700">
               Images
@@ -218,7 +218,7 @@ const Home = () => {
             creativity soar with **Xtra**. Download today!
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-10 place-items-center gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-10  gap-4">
             <ImageCard imageUrl={app1} />
             <ImageCard imageUrl={app2} />
             <ImageCard imageUrl={app3} />
