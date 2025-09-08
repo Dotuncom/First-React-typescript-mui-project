@@ -38,7 +38,7 @@ const departments = ['Personal Department', 'Support', 'Sales', 'Marketing'];
     <div className="max-w-2xl " >
         <form 
          onSubmit={handleSubmit}>
-          <div className="flex  justify-between flex-col lg:flex-row  ">
+          <div className="flex gap-6  justify-between flex-col lg:flex-row  ">
           <FormInput
            type="text"
            label='your name(require)'

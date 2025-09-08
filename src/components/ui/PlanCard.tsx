@@ -1,3 +1,5 @@
+import { FaCheck } from "react-icons/fa6";
+
 type PricingFeature = {
   name: string;
   included?: boolean;
@@ -16,15 +18,19 @@ type PricingPlanProps = {
 };
 const PlanCard = ({ plan }: PricingPlanProps) => {
   return (
-    <div className="relative p-4 w-65 h-120 group rounded-2xl border-2 overflow-hidden border-gray-400/50 transform hover:-translate-y-5 ">
+    <div className="relative p-4 max-w-70 h-120 group rounded-2xl border-2 overflow-hidden border-gray-400/50 transform hover:-translate-y-5 ">
       <div className="flex flex-col items-center space-y-6 ">
         <h4 className="text-gray-500"> {plan.name}</h4>
         <h1 className="text-4xl font-bold">${plan.price}</h1>
         <div className="w-full flex  flex-col ">
           {plan.features.map((feature, index) => (
-            <span
-            className=" border-b border-gray-400 p-2"
+            <div className={`w-full flex items-center ${feature.included ? 'text-black':'text-gray-400'}`}>
+              <FaCheck />
+                     <span
+            className={` w-full border-b  border-gray-400 p-2`} 
              key={index}>{feature.name}</span>
+            </div>
+           
           ))}
         </div>
 

@@ -228,8 +228,8 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="py-15 px-6">
-        <div className="max-w-7xl mx-auto">
+      <div className="py-15 px-10">
+        <div className="">
           <div>
             <h1 className="text-3xl text-center md:text-left text-gray-700">
               Offers
@@ -240,7 +240,7 @@ const Home = () => {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 place-items-center gap-4 mt-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-4 mt-10">
             {pricingPlans.map((plan) => (
               <PlanCard key={plan.id} plan={plan} />
             ))}
