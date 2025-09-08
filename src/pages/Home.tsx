@@ -219,9 +219,12 @@ const Home = () => {
             creativity soar with **Xtra**. Download today!
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-10  place-items-center gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 mt-10  place-items-center gap-4">
             <ImageCard imageUrl={app1} />
             <ImageCard imageUrl={app2} />
+            <ImageCard imageUrl={app3} />
+
+            <ImageCard imageUrl={app4} />
             <ImageCard imageUrl={app3} />
 
             <ImageCard imageUrl={app4} />
